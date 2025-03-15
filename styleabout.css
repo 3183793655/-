@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s, text-decoration 0.3s;
+    position: relative;
+}
+
+.navbar-menu a::after {
+    content: ''; /* 下划线的内容为空 */
+    position: absolute;
+    bottom: -2px; /* 下划线的位置 */
+    left: 0;
+    width: 0; /* 初始宽度为 0 */
+    height: 2px; /* 下划线高度 */
+    background-color: #4CAF50; /* 下划线颜色 */
+    transition: width 0.3s; /* 动画效果 */
+}
+
+.navbar-menu a:hover {
+    color: #4CAF50;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%; /* 悬停时下划线扩展到整个文字 */
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-switch img {
+    height: 20px;
+    width: auto;
+}
+
+.language-switch select {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.language-switch select:focus {
+    outline: none;
+}
+
+/* 图片容器样式 */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* 设置图片容器的高度 */
+    overflow: hidden;
+}
+
+/* 图片样式 */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文字覆盖样式 */
+.overlay-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 36px;
+}
+
+/* 文字样式 */
+.overlay-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(244, 141, 23);
+}
+
+.overlay-text h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(240, 238, 234);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 战略布局容器 */
+.strategic-layout {
+    display: flex;
+    align-items: flex-start; /* 顶部对齐 */
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* 图片容器样式 */
+.map-container {
+    width: 50%; /* 地图容器宽度 */
+    padding: 20px;
+}
+
+.map-image {
+    width: 280px; /* 图片宽度100% */
+    height: 20%;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+/* 文字部分样式 */
+.layout-text {
+    margin-top: 30px;
+    width: 70%; /* 文字容器宽度 */
+    padding: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.layout-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.layout-text h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.layout-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 适配小屏幕设备，改为垂直排列 */
+@media (max-width: 768px) {
+    .strategic-layout {
+        flex-direction: column; /* 竖向排列 */
+        align-items: center;
+    }
+
+    .map-container,
+    .layout-text {
+        width: 90%; /* 让所有区域适应屏幕 */
+        max-width: 100%; /* 确保容器不会超过屏幕宽度 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .column {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .column h2.title {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 10px; /* Adjust the spacing between title and paragraph */
+  }
+  
+  .column .chinese {
+    font-size: 24px;
+    display: block; /* Ensure it takes full width */
+  }
+  
+  .column .english {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    display: block; /* Ensure it takes full width */
+  }
+  
+  .column p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Adjust the spacing between paragraphs */
+  }
+  
+  .column img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .column {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .column img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .banner {
+    position: relative;
+    background-image: url('图片4.jpg'); /* Replace with actual background image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Keep the banner height constant, adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Banner content */
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px; /* Adjust the padding to control the size of the content box */
+    border-radius: 20px;
+    width: 80%; /* Controls the width of the content box */
+    max-width: 800px; /* Maximum width for large screens */
+    min-width: 200px; /* Minimum width to prevent the content from shrinking too much */
+}
+
+/* Title styles */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Description styles */
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Image inside the banner-content */
+.banner-image {
+    width: 40px; /* Maximum width for the image */
+    height: 150px; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between text and image */
+}
+
+/* Optional: To make the image behave responsively */
+.banner-content img {
+    width: 40%; /* Ensure the image occupies the full width of its container */
+    max-width: 40%; /* Set the image to scale properly inside the container */
+    height:200px; /* Ensure aspect ratio is maintained */
+    margin-top: 15px; /* Space between content and image */
+}

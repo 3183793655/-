@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使body占满整个视口高度 */
+}
+
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Increased space between steps */
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    border: 3px solid  #4CAF50;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.description p {
+    margin: 0;
+    color:#4CAF50;
+}
+
+/* Arrow styles */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #4CAF50;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .flowchart {
+        gap: 20px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .description {
+        width: 250px;
+    }
+
+    .arrow {
+        border-top-width: 15px;
+    }
+}

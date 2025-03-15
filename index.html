@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银铃筑家</title>
+    <link rel="stylesheet" href="22222.CSS">
+    <style>
+        /* 引入等宽字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+    </style>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.jpg" alt="标志">
+        </div>
+        <div class="navbar-menu">
+            <a href="#">首页</a>
+            <a href="about.html">关于我们</a>
+            <a href="services.html">匠心服务</a>
+            <a href="news.html">新闻资讯</a>
+            <a href="contact.html">客服咨询</a>
+            <a href="shop.html">线上商城</a>
+        </div>
+        <div class="language-switch">
+            <img id="flag-icon" src="china-flag.png" alt="国旗">
+            <select id="language-select">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 图片轮播区域 -->
+    <div class="box">
+        <!-- 图片居中 -->
+        <img src="图片3.jpg" alt="Image" class="center-img">
+        
+        <!-- 左右箭头按钮 -->
+        <div class="arrow left" title="Previous">&lt;</div>
+        <div class="arrow right" title="Next">&gt;</div>
+    </div>
+
+    <script>
+        // 图片轮播功能
+        let img = document.querySelector(".center-img");
+        let arr = ["图片3.jpg", "图片4.jpg", "图片1.jpg"];
+        let flag = 0;
+
+        // 自动播放
+        let times = setInterval(() => {
+            img.src = `${arr[flag]}`;
+            flag = (flag + 1) % arr.length; // 使用取余操作简化逻辑
+        }, 4000);
+
+        // 左箭头点击事件
+        let arrowLeft = document.querySelector(".arrow.left");
+        arrowLeft.onclick = () => {
+            flag = (flag - 1 + arr.length) % arr.length; // 防止负数
+            img.src = `${arr[flag]}`;
+        };
+
+        // 右箭头点击事件
+        let arrowRight = document.querySelector(".arrow.right");
+        arrowRight.onclick = () => {
+            flag = (flag + 1) % arr.length;
+            img.src = `${arr[flag]}`;
+        };
+    </script>
+<script src="language-switch.js"></script> <!-- 导入语言切换脚本 -->
+<script src="carousel.js"></script> <!-- 导入图片轮播脚本 -->
+
+
+
+
+
+
+
+
+
+    <div class="service-features">
+        <h1>服务特色</h1>
+        <p>SERVICE FEATURES</p>
+        <div class="feature-cards">
+            <div class="card">
+                <h2>专业化</h2>
+                <p>深耕银发领域<br>适老化服务的龙头企业</p>
+            </div>
+            <div class="card">
+                <h2>精细化</h2>
+                <p>养护、托管、娱乐康复和养老等服务一体</p>
+            </div>
+            <div class="card">
+                <h2>信息化</h2>
+                <p>互联网+养老<br>“产学研”一体化的发展</p>
+            </div>
+            <div class="card">
+                <h2>个性化</h2>
+                <p>现代化的设计理念<br>一人一策一户一案</p>
+            </div>
+            <div class="card">
+                <h2>品牌化</h2>
+                <p>认知标准化、宣传标准化、服务标准化</p>
+            </div>
+            <div class="card">
+                <h2>连锁化</h2>
+                <p>统一经营、统一规范<br>统一服务、统一管理</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+ 
+   
+    
+    <div class="video-case-title">
+        <h1>暖心瞬间 <span>VIDEO CASE</span></h1>
+    </div>
+
+    <!-- 新闻内容部分 -->
+    <div class="news-case">
+        <!-- 新闻卡片1 -->
+        <div class="news-card" onclick="window.location.href='news.html?news=1'">
+            <img src="为爱筑巢.jpg" alt="为爱筑巢">
+            <h2>银龄筑家适老化改造团队正式成立，守护父母晚年每一程</h2>
+            <p>银龄筑家适老化改造团队今日启航，用科技与温度重塑家的每一寸空间，让爱不再留有遗憾。</p>
+        </div>
+
+        <!-- 新闻卡片2 -->
+        <div class="news-card" onclick="window.location.href='news.html?news=2'">
+            <img src="回南天.png" alt="暖心防护指南">
+            <h2>回南天来袭，守护爸妈的"干燥防线"</h2>
+            <p>预防危险特别推出适老化防潮改造方案，用科技与关怀助您和家人安心度过回南天。</p>
+        </div>
+
+        <!-- 新闻卡片3 -->
+        <div class="news-card" onclick="window.location.href='news.html?news=3'">
+          <img src="春分.png" alt="春分至，焕新家">
+          <h2>银龄筑家守护长辈的春日时光</h2>
+          <p>银龄筑家，让乐龄生活更自在。这个春天，让我们携手为家注入更多安全与爱意;银龄筑家深知，真正的关怀，是让家既安全又温暖。</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="header">
+                <img src="logo.jpg" alt="银铃筑家">
+                <h1>银铃筑家</h1>
+            </div>
+            <div class="contact-info">
+                <p><strong>集团总部地址：</strong>中国（珠海）香洲区唐家湾会同村金同路2000号</p>
+                <div class="contact-methods">
+                    <p><strong>联系方式：</strong></p>
+                    <ul>
+                        <li>官方热线：4000-1641-19</li>
+                        <li>微信客服：18052007552 / 18013975074</li>
+                        <li>电子邮箱：service@china-healthy.com</li>
+                    </ul>
+                </div>
+
+ 
+</body>
+</html>
+</html>

@@ -1,0 +1,370 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s, text-decoration 0.3s;
+    position: relative;
+}
+
+.navbar-menu a::after {
+    content: ''; /* 下划线的内容为空 */
+    position: absolute;
+    bottom: -2px; /* 下划线的位置 */
+    left: 0;
+    width: 0; /* 初始宽度为 0 */
+    height: 2px; /* 下划线高度 */
+    background-color: #4CAF50; /* 下划线颜色 */
+    transition: width 0.3s; /* 动画效果 */
+}
+
+.navbar-menu a:hover {
+    color: #4CAF50;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%; /* 悬停时下划线扩展到整个文字 */
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-switch img {
+    height: 20px;
+    width: auto;
+}
+
+.language-switch select {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.language-switch select:focus {
+    outline: none;
+}
+/* 图片容器样式 */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* 设置图片容器的高度 */
+    overflow: hidden;
+}
+
+/* 图片样式 */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文字覆盖样式 */
+.overlay-text {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    text-align: right;
+    font-size: 36px;
+}
+
+/* 文字样式 */
+.overlay-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(247, 249, 250);
+}
+
+.overlay-text h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(236, 239, 236);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 50px;
+}
+
+.info {
+    text-align: center;
+    color: #565454;
+    margin-bottom: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-right: 110px;
+    font-family:serif;
+}
+hr {
+    border: 0; /* 移除默认边框 */
+    height: 3px; /* 设置高度 */
+    width: 1200px;
+    background-color: rgb(164, 161, 161); /* 设置背景颜色为黑色 */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #262424;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.form-group input {
+    width: 100%; /* 宽度100% */
+    padding: 20px; /* 增加内边距，让边框更远离边缘 */
+    border: 3px solid #636161; /* 设置边框 */
+    border-radius: 4px; /* 设置圆角 */
+    box-sizing: border-box; /* 确保内边距和边框包含在元素的总宽度和高度内 */
+    margin-bottom: 10px; /* 设置底部外边距 */
+    text-align: center; /* 文本居中 */
+    font-size: 16px; /* 设置字体大小 */
+    line-height: 20px; /* 调整行高以适应新的内边距，确保文本垂直居中 */
+    width: 600px;
+    margin-left: 420px;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    width: 300px;
+    margin-left: 580px;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #4CAF50;
+}
+
+.divider {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    width: 100%; /* 容器宽度 */
+}
+
+.line {
+    
+    height: 2px; /* 虚线的高度 */
+    background: #000 dashed; /* 设置虚线颜色和样式 */
+    margin: 0 10px; /* 虚线与文字之间的间隔 */
+}
+
+.text {
+    font-size: 20px; /* 设置字体大小 */
+    color: #000; /* 设置字体颜色 */
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.query-options {
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 两端对齐 */
+    width: 600px; /* 容器宽度，确保有足够的空间放置两个按钮和间隔 */
+    margin-left: 290px; /* 水平居中容器 */
+    padding: 0 20px; /* 添加内边距，使按钮与容器边缘有间隔 */
+}
+
+.query-btn {
+    flex: 0 0 400px; /* 不让按钮弹性增长，设置固定宽度 */
+    padding: 15px; /* 设置内边距 */
+    border-color: #4CAF50;
+    border-radius: 4px; /* 设置圆角 */
+    background-color: #fff;
+    color:#4CAF50;
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    font-size: 18px;
+   
+}
+
+.query-btn:not(:last-child) {
+    margin-right: 40px; /* 在按钮之间添加间隔 */
+}
+
+
+
+
+
+
+
+hr {
+    border: 0; /* 移除默认边框 */
+    height: 2px; /* 设置高度 */
+    width: 1200px;
+    background-color: rgb(164, 161, 161); /* 设置背景颜色为黑色 */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.containe {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left; /* 所有内容左对齐 */
+    margin-left: 40px;
+}
+
+h1 {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; 
+    
+}
+
+p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family:serif;
+}
+
+.support-btn {
+    padding: 15px 30px;
+    font-size: 19px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.support-btn:hover {
+    background-color: #4CAF50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

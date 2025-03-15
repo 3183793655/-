@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s, text-decoration 0.3s;
+    position: relative;
+}
+
+.navbar-menu a::after {
+    content: ''; /* 下划线的内容为空 */
+    position: absolute;
+    bottom: -2px; /* 下划线的位置 */
+    left: 0;
+    width: 0; /* 初始宽度为 0 */
+    height: 2px; /* 下划线高度 */
+    background-color: #4CAF50; /* 下划线颜色 */
+    transition: width 0.3s; /* 动画效果 */
+}
+
+.navbar-menu a:hover {
+    color: #4CAF50;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%; /* 悬停时下划线扩展到整个文字 */
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-switch img {
+    height: 20px;
+    width: auto;
+}
+
+.language-switch select {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.language-switch select:focus {
+    outline: none;
+}
+/* 图片容器样式 */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* 设置图片容器的高度 */
+    overflow: hidden;
+}
+
+/* 图片样式 */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文字覆盖样式 */
+.overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    text-align: left;
+    font-size: 36px;
+}
+
+/* 文字样式 */
+.overlay-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(239, 244, 241);
+}
+
+.overlay-text h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(236, 239, 236);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 行业资讯标题 */
+.video-case-title {
+    text-align: left; /* 左对齐 */
+    margin: 40px 0;
+}
+
+.video-case-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 300px;
+    color: #4CAF50;
+    letter-spacing: 3px; /* 字母间距 */
+}
+
+.video-case-title span {
+    font-size: 18px;
+    color: #888;
+}
+
+/* 横线样式 */
+.section-line {
+    border-top: 2px solid #4CAF50; /* 横线的颜色 */
+    width: 800px; /* 横线的长度 */
+    margin-top: 10px;
+}
+
+/* 新闻内容部分 */
+.news-case {
+    display: flex;
+    flex-direction: column; /* 每条新闻一行 */
+    gap: 20px;
+    
+    margin: 20px;
+    align-items: center;
+}
+
+/* 新闻卡片样式 */
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 让卡片占满整行 */
+    text-align: left; /* 左对齐 */
+    max-width: 1000px;
+    padding: 20px;
+    cursor: pointer; /* 使卡片可点击 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05); /* 增加缩放效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
+
+.news-card img {
+    width: 40%;
+    height: 20%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.news-card h2 {
+    color: #4CAF50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* 点击按钮样式 */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
