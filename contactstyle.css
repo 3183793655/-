@@ -156,6 +156,10 @@ body {
 
 
 
+.container {
+    text-align: center; /* 让所有直接子元素居中 */
+}
+
 .container h1 {
     text-align: center;
     color: #333;
@@ -163,130 +167,116 @@ body {
 }
 
 .info {
-    text-align: center;
     color: #565454;
     margin-bottom: 30px;
     font-size: 20px;
-    margin-top: 40px;
-    margin-left: 110px;
-    margin-right: 110px;
-    font-family:serif;
+    margin: 40px auto; /* 上下 40px，左右自动居中 */
+    width: 60%; /* 控制宽度，使其不会过宽 */
+    font-family: serif;
 }
+
 hr {
-    border: 0; /* 移除默认边框 */
-    height: 3px; /* 设置高度 */
-    width: 1200px;
-    background-color: rgb(164, 161, 161); /* 设置背景颜色为黑色 */
-    margin-top: 40px;
-    margin-bottom: 40px;
+    border: 0;
+    height: 3px;
+    width: 60%;
+    background-color: rgb(164, 161, 161);
+    margin: 40px auto;
 }
 
 .form-group {
     margin-bottom: 20px;
+    text-align: center; /* 让 label 居中 */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     color: #262424;
-    text-align: center;
     font-size: 16px;
-    font-style: normal;
 }
 
 .form-group input {
-    width: 100%; /* 宽度100% */
-    padding: 20px; /* 增加内边距，让边框更远离边缘 */
-    border: 3px solid #636161; /* 设置边框 */
-    border-radius: 4px; /* 设置圆角 */
-    box-sizing: border-box; /* 确保内边距和边框包含在元素的总宽度和高度内 */
-    margin-bottom: 10px; /* 设置底部外边距 */
-    text-align: center; /* 文本居中 */
-    font-size: 16px; /* 设置字体大小 */
-    line-height: 20px; /* 调整行高以适应新的内边距，确保文本垂直居中 */
-    width: 600px;
-    margin-left: 420px;
-    margin-top: 20px;
+    width: 50%; /* 调整输入框宽度 */
+    padding: 15px;
+    border: 3px solid #636161;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 20px auto; /* 让输入框居中 */
+    text-align: center;
+    font-size: 16px;
+    display: block; /* 让其在 div 内独占一行 */
 }
 
 .submit-btn {
-    width: 100%;
-    padding: 20px;
+    width: 30%;
+    padding: 15px;
     border: none;
     border-radius: 4px;
     background-color: #4CAF50;
     color: #fff;
     cursor: pointer;
-    width: 300px;
-    margin-left: 580px;
     font-size: 19px;
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
 }
 
 .submit-btn:hover {
-    background-color: #4CAF50;
+    background-color: #45A049;
 }
 
 .divider {
     display: flex;
-    align-items: center; /* 垂直居中对齐 */
-    justify-content: center; /* 水平居中对齐 */
-    width: 100%; /* 容器宽度 */
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 20px auto;
 }
 
 .line {
-    
-    height: 2px; /* 虚线的高度 */
-    background: #000 dashed; /* 设置虚线颜色和样式 */
-    margin: 0 10px; /* 虚线与文字之间的间隔 */
+    flex-grow: 1;
+    height: 2px;
+    background-color: #000;
+    margin: 0 10px;
 }
 
 .text {
-    font-size: 20px; /* 设置字体大小 */
-    color: #000; /* 设置字体颜色 */
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
 }
 
 .query-options {
-    display: flex; /* 使用flex布局 */
-    justify-content: space-between; /* 两端对齐 */
-    width: 600px; /* 容器宽度，确保有足够的空间放置两个按钮和间隔 */
-    margin-left: 290px; /* 水平居中容器 */
-    padding: 0 20px; /* 添加内边距，使按钮与容器边缘有间隔 */
+    display: flex;
+    justify-content: center; /* 让按钮整体居中 */
+    gap: 20px;
+    width: 60%;
+    margin: 20px auto;
 }
 
 .query-btn {
-    flex: 0 0 400px; /* 不让按钮弹性增长，设置固定宽度 */
-    padding: 15px; /* 设置内边距 */
-    border-color: #4CAF50;
-    border-radius: 4px; /* 设置圆角 */
+    flex: 0 0 45%;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
     background-color: #fff;
-    color:#4CAF50;
-    cursor: pointer; /* 鼠标悬停时显示指针 */
+    color: #4CAF50;
+    cursor: pointer;
     font-size: 18px;
-   
+    text-align: center;
 }
 
-.query-btn:not(:last-child) {
-    margin-right: 40px; /* 在按钮之间添加间隔 */
+.query-btn:hover {
+    background-color: #4CAF50;
+    color: white;
 }
-
-
-
-
-
-
 
 hr {
-    border: 0; /* 移除默认边框 */
-    height: 2px; /* 设置高度 */
-    width: 1200px;
-    background-color: rgb(164, 161, 161); /* 设置背景颜色为黑色 */
-    margin-top: 40px;
-    margin-bottom: 20px;
+    border: 0;
+    height: 2px;
+    width: 60%;
+    background-color: rgb(164, 161, 161);
+    margin: 40px auto;
 }
+
 
 
 
